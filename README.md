@@ -5,7 +5,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omniauth-phabricator', :github => 'dgvz/omniauth-phabricator', :tag => 'v0.1.0'
+gem 'omniauth-phabricator', :github => 'zencodex/omniauth-phabricator'
 ```
 
 And then execute:
