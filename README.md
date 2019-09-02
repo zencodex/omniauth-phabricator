@@ -12,6 +12,27 @@ And then execute:
 
     $ bundle
 
+vi /srv/gitlab/config/gitlab.rb
+
+```ruby
+gitlab_rails['omniauth_allow_single_sign_on'] = ['phabricator']
+gitlab_rails['omniauth_providers'] = [
+  {
+    "name" => "phabricator",
+    'app_id' => 'PHID-OASC-ro6q5je6pbekr3ivo2ii',
+    'app_secret' => 'ujacvgq7rpsbqztifkuobwobkgrnlmmg',
+    "args" => {
+      client_options: {
+        'site' => 'https://team.bookcapt.com', # including port if necessary
+        'authorize_url' => '/oauthserver/auth/',
+        'token_url' => '/oauthserver/token/'
+      }
+    }
+
+  ...
+]
+```
+
 ## Usage
 
 ### Rack
